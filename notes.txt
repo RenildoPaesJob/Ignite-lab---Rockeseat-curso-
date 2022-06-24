@@ -1,0 +1,23 @@
+CMS => Content Management System
+
+WORDPRESS
+    Traz tanto o painel de ADMIN, quanto a parte visual do front-end (temas)
+
+HEADLESS CMS (GraphQL)
+    Traz de ADMIN (dados fornecidos através de uma API REST ou GraphQL), o React que consome essa API do CMS
+
+Comandos no GraphQL:
+    query and mutation
+
+    query => buscar dados
+    
+    mutation => criar, alterar ou deletar dados
+
+import { client } from "./lib/apollo"
+useEffect( () => {
+    client.query({
+      query: GET_LESSONS_QUERY
+    }).then( (response) => {
+      console.log(response.data);
+    })
+  }, [])
