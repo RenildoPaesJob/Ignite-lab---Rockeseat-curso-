@@ -13,11 +13,13 @@ const GET_LESSONS_QUERY = gql`
 interface Lesson {
   id: string;
   title: string;
+
 }
 
 function App() {
   
   const {data} = useQuery<{lessons: Lesson[]}>(GET_LESSONS_QUERY)
+  
   // console.log('data: ', data);
 
   return (
